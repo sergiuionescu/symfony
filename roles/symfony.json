@@ -1,0 +1,30 @@
+{
+    "name": "symfony",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "description": "Symfony environment configuration.",
+    "run_list": [
+        "recipe[symfony]",
+        "recipe[lamp::nfs]",
+        "recipe[lamp::xdebug]"
+    ],
+    "default_attributes": {
+        "apache": {
+            "mpm": "prefork"
+        },
+        "mysql": {
+            "server_root_password": "",
+            "server_repl_password": "",
+            "server_debian_password": ""
+        },
+        "lamp": {
+            "xdebug": {
+                "directives": {
+                    "remote_host": "10.0.2.2",
+                    "remote_enable": 0,
+                    "remote_autostart": 1
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "symfony-travis",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "description": "Symfony environment configuration with travis.ci specific configuration.",
+    "run_list": [
+        "role[symfony]"
+    ],
+    "default_attributes": {
+        "php" : {
+            "install_method": "source"
+        }
+    }
+}

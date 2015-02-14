@@ -1,0 +1,21 @@
+---
+driver:
+  name: vagrant
+  network:
+    - ["private_network", {ip: "192.168.3.4"}]
+  synced_folders:
+    - ["./", "/vagrant"]
+
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-14.04
+  - name: ubuntu-12.04
+
+suites:
+  - name: default
+    run_list:
+      - role[symfony]
+    attributes:
