@@ -13,7 +13,7 @@ Vagrant::Config.run do |config|
 
   # config.vm.boot_mode = :gui
 
-  config.vm.network :hostonly, "192.168.3.4"
+  config.vm.network :hostonly, "192.168.3.6"
 
   # config.vm.forward_port 80, 8080
 
