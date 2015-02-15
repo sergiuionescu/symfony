@@ -17,19 +17,13 @@ include_recipe "composer"
 package "php5-json" do
   action :install
 end
-package "curl" do
-  action :install
-end
 
-
-execute "download-symfony-cli" do
-  cwd "/tmp"
-  command "curl -LsS http://symfony.com/installer > symfony.phar"
-  not_if "ls /usr/local/bin/symfony"
+remote_file "#{Chef::Config[:file_cache_path]}/symfony.phar" do
+  source "http://symfony.com/installer"
 end
 
 execute "install-symfony-cli" do
-  cwd "/tmp"
+  cwd Chef::Config[:file_cache_path]
   command "sudo mv symfony.phar /usr/local/bin/symfony"
   not_if "ls /usr/local/bin/symfony"
 end
@@ -70,13 +64,13 @@ execute "symfony-#{node['symfony']['project']['name']}-permissions" do
 end
 
 execute "setup-db-#{node['symfony']['project']['name']}" do
-  cwd  "#{project_root}"
+  cwd  project_root
   command "php app/console doctrine:database:create"
   not_if "ls .install"
 end
 
 execute "setup-db-#{node['symfony']['project']['name']}" do
-  cwd  "#{project_root}"
+  cwd  project_root
   command "touch .install"
 end
 

@@ -144,5 +144,4 @@ The project root directory is mounted inside the dev virtual machine directory u
 
 Todos
 -----
-- Apache needs an extra converge at this point
 - Expose an interface for creating source symlinks
