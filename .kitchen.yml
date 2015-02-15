@@ -2,7 +2,7 @@
 driver:
   name: vagrant
   network:
-    - ["private_network", {ip: "192.168.3.4"}]
+    - ["private_network", {ip: "192.168.3.6"}]
   synced_folders:
     - ["./", "/vagrant"]
 
