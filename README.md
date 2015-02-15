@@ -1,5 +1,5 @@
 symfony
-==========
+=======
 
 Symfony environment with Berkshelf Chef and Vagrant support
 
@@ -142,7 +142,7 @@ Source mounts
 
 The project root directory is mounted inside the dev virtual machine directory under the /vagrant path when using both kitchen converge or vagrant up to launch the machine.
 
-
 Todos
 -----
+- Apache needs an extra converge at this point
 - Expose an interface for creating source symlinks
