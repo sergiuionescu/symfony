@@ -14,8 +14,10 @@ include_recipe 'php::module_gd'
 include_recipe 'cron'
 include_recipe "composer"
 
-package "php5-json" do
-  action :install
+%w{php5-json php5-curl}.each do |pkg|
+  package pkg do
+    action :install
+  end
 end
 
 remote_file "#{Chef::Config[:file_cache_path]}/symfony.phar" do
