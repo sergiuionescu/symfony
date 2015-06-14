@@ -8,9 +8,8 @@
     ],
     "default_attributes": {
         "lamp": {
-                "xdebug": {
-                    "version": "2.0.3"
-                }
+            "xdebug": {
+                "version": "2.0.3"
             }
         }
     }
