@@ -7,7 +7,6 @@ long_description 'Installs/Configures symfony'
 version          '0.1.1'
 
 depends 'lamp', '~> 0.2.1'
-depends 'database', '~> 2.3.0'
 depends 'php'
 depends 'cron', '~> 1.4.0'
 depends 'composer', '~> 1.0.5'
