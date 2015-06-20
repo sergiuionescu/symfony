@@ -7,6 +7,9 @@
         "role[symfony]"
     ],
     "default_attributes": {
+        "php" : {
+            "version": "5.4"
+        },
         "lamp": {
             "xdebug": {
                 "version": "2.0.3"
