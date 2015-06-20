@@ -10,6 +10,7 @@ package "ruby-dev" do
 end
 
 include_recipe 'lamp'
+include_recipe 'mysql2_chef_gem'
 include_recipe 'php::module_gd'
 include_recipe 'cron'
 include_recipe "composer"
