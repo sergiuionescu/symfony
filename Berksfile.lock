@@ -6,7 +6,7 @@ DEPENDENCIES
     revision: b939c90ead62aade0558d9264e694f386f0a16a4
   php
     git: git://github.com/sergiuionescu/php.git
-    revision: ecd809a23d4c8760d8d9e2b6725f64108c92038c
+    revision: ee383e8b4858e69f0719085ae79f4dd3d98aa425
   symfony
     path: .
     metadata: true
