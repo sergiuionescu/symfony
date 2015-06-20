@@ -4,7 +4,6 @@ DEPENDENCIES
   lamp
     git: git://github.com/sergiuionescu/lamp.git
     revision: b688d96f73c37d8df845edb465365b7565a3a5df
-  mysql2_chef_gem
   php
     git: git://github.com/sergiuionescu/php.git
     revision: fe44690d8fcd73012ea0c607f32ded4d6b113ddc
@@ -33,17 +32,9 @@ GRAPH
     sendmail (>= 0.0.0)
     vim (>= 0.0.0)
   line (0.6.1)
-  mariadb (0.3.0)
-    apt (>= 0.0.0)
-    yum (>= 0.0.0)
-    yum-epel (>= 0.0.0)
   mysql (6.0.22)
     smf (>= 0.0.0)
     yum-mysql-community (>= 0.0.0)
-  mysql2_chef_gem (1.0.1)
-    build-essential (>= 0.0.0)
-    mariadb (>= 0.0.0)
-    mysql (>= 0.0.0)
   nfs (2.1.0)
     line (>= 0.0.0)
   php (1.5.0)
@@ -61,7 +52,6 @@ GRAPH
     composer (>= 0.0.0)
     cron (>= 0.0.0)
     lamp (>= 0.0.0)
-    mysql2_chef_gem (>= 0.0.0)
     php (>= 0.0.0)
   vim (1.1.2)
   windows (1.37.0)

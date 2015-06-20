@@ -8,6 +8,5 @@ version          '0.1.1'
 
 depends 'php'
 depends 'lamp'
-depends 'mysql2_chef_gem'
 depends 'cron'
 depends 'composer'
