@@ -3,10 +3,10 @@ DEPENDENCIES
   cron
   lamp
     git: git://github.com/sergiuionescu/lamp.git
-    revision: b688d96f73c37d8df845edb465365b7565a3a5df
+    revision: b939c90ead62aade0558d9264e694f386f0a16a4
   php
     git: git://github.com/sergiuionescu/php.git
-    revision: 3932f57c7262663e2a5bc94f634a6911abce1cce
+    revision: ecd809a23d4c8760d8d9e2b6725f64108c92038c
   symfony
     path: .
     metadata: true
