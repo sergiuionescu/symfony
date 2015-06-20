@@ -8,7 +8,7 @@
     ],
     "default_attributes": {
         "php" : {
-            "version": "5.4"
+            "install_method": "source"
         },
         "lamp": {
             "xdebug": {
