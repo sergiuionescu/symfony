@@ -25,7 +25,7 @@ task :solo do
   sh "sudo berks install"
   sh "sudo berks vendor /tmp/cookbooks"
   sh "sudo cp -r ../symfony /tmp/cookbooks/"
-  sh "sudo chef-solo -l debug -c test/.chef/solo.rb -j test/.chef/$RUNLIST"
+  sh "sudo chef-solo -c test/.chef/solo.rb -j test/.chef/$RUNLIST"
 end
 
 task :prepare_sandbox do
