@@ -4,11 +4,6 @@
 #
 # Copyright (c) 2014 The Authors, All Rights Reserved.
 
-#Cover the provisioning dependency for ruby-dev
-package "ruby-dev" do
-  action :install
-end
-
 include_recipe 'lamp'
 include_recipe 'php::module_gd'
 include_recipe 'cron'
@@ -47,6 +42,7 @@ template "#{project_root}/app/config/parameters.yml" do
   source "parameters.yml.erb"
   variables(
       :database_driver => node['symfony']['project']['database_driver'],
+      :unix_socket => node['symfony']['project']['unix_socket'],
       :database_host => node['symfony']['project']['database_host'],
       :database_name => node['symfony']['project']['database_name'],
       :database_port => node['symfony']['project']['database_port'],

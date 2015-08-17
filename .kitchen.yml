@@ -12,7 +12,6 @@ provisioner:
 
 platforms:
   - name: ubuntu-14.04
-  - name: ubuntu-12.04
 
 suites:
   - name: default
