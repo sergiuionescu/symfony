@@ -47,9 +47,6 @@ The role used to provision the dev environment, you can create your own role to 
         "recipe[lamp::xdebug]"
     ],
     "default_attributes": {
-        "apache": {
-            "mpm": "prefork"
-        },
         "lamp": {
             "xdebug": {
                 "directives": {
@@ -72,14 +69,6 @@ Details:
     ],
 ```
 The recipes lamp::nfs and lamp::xdebug are only required for the dev environment to expose a nfs share of your /var/www directory and install the xdebug extension for php.
-
-
-```json
-"apache": {
-    "mpm": "prefork"
-}
-```
-Install apache with mpm prefork - compatible with non thread safe php.
 
 
 ```json
@@ -119,9 +108,6 @@ An example role for production would be the following:
         "recipe[symfony]"
     ],
     "default_attributes": {
-        "apache": {
-            "mpm": "prefork"
-        },
         "mysql": {
             "server_root_password": "supersecretpassword",
             "server_repl_password": "supersecretpassword",
