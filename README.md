@@ -2,6 +2,8 @@ symfony
 =======
 
 Symfony environment with Berkshelf Chef and Vagrant support
+* Master: [![Build Status](https://api.travis-ci.org/sergiuionescu/symfony.svg?branch=master)](http://travis-ci.org/sergiuionescu/symfony)
+* Dev: [![Build Status](https://api.travis-ci.org/sergiuionescu/symfony.svg?branch=dev)](http://travis-ci.org/sergiuionescu/symfony)
 
 
 Requirements
