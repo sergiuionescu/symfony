@@ -3,21 +3,21 @@ DEPENDENCIES
   cron
   lamp
     git: git://github.com/sergiuionescu/lamp.git
-    revision: d14f48656100dc32f6eb214255dffc9fe8c2ac2a
+    revision: 54ed2bc1f33575fa723d8cb529a97a4a1eff1893
   php
     git: git://github.com/sergiuionescu/php.git
-    revision: ee383e8b4858e69f0719085ae79f4dd3d98aa425
+    revision: 9d783ab1abc08dc66099ecfe340912a454167466
   symfony
     path: .
     metadata: true
 
 GRAPH
   apache2 (3.1.0)
-  apt (2.7.0)
+  apt (2.8.2)
   build-essential (2.2.3)
   chef-sugar (3.1.1)
   chef_handler (1.2.0)
-  composer (2.1.0)
+  composer (2.2.0)
     php (>= 0.0.0)
     windows (>= 0.0.0)
   cron (1.6.1)
@@ -32,17 +32,17 @@ GRAPH
     sendmail (>= 0.0.0)
     vim (>= 0.0.0)
   line (0.6.2)
-  mysql (6.1.0)
+  mysql (6.1.1)
     smf (>= 0.0.0)
     yum-mysql-community (>= 0.0.0)
   nfs (2.2.5)
     line (>= 0.0.0)
     sysctl (>= 0.0.0)
   ohai (2.0.1)
-  php (1.5.0)
+  php (1.7.2)
     build-essential (>= 0.0.0)
     iis (>= 0.0.0)
-    mysql (>= 0.0.0)
+    mysql (>= 6.0.0)
     windows (>= 0.0.0)
     xml (>= 0.0.0)
     yum-epel (>= 0.0.0)
@@ -57,14 +57,14 @@ GRAPH
     php (>= 0.0.0)
   sysctl (0.6.2)
     ohai (>= 0.0.0)
-  vim (1.1.2)
-  windows (1.38.1)
+  vim (2.0.0)
+  windows (1.38.2)
     chef_handler (>= 0.0.0)
   xml (1.2.13)
     build-essential (>= 0.0.0)
     chef-sugar (>= 0.0.0)
-  yum (3.6.3)
-  yum-epel (0.6.2)
+  yum (3.7.1)
+  yum-epel (0.6.3)
     yum (~> 3.2)
-  yum-mysql-community (0.1.17)
+  yum-mysql-community (0.1.18)
     yum (>= 3.0)

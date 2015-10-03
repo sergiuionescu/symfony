@@ -3,6 +3,11 @@
   ServerAlias <% @params[:server_aliases].each do |a| %><%= a %> <% end %>
   DocumentRoot <%= @params[:docroot] %>
 
+  <Proxy *>
+    Require all granted
+  </Proxy>
+  ProxyPassMatch ^/(.*\.php(/.*)?)$ fcgi://127.0.0.1:9000<%= @params[:docroot] %>/$1
+
   <Directory <%= @params[:docroot] %>>
     AllowOverride all
     Options FollowSymLinks
