@@ -12,7 +12,7 @@ before_install:
   - "wget -N -P packages/ http://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chefdk_0.3.0-1_amd64.deb"
   - "sudo dpkg -i packages/chefdk_0.3.0-1_amd64.deb"
   #Allow installing php 5.4 below
-  - "sudo add-apt-repository ppa:ondrej/php5"
+  - "sudo add-apt-repository ppa:ondrej/php5 -y"
 script:
   - bundle exec rake knife
   - bundle exec rake foodcritic
