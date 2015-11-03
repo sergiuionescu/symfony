@@ -5,6 +5,7 @@
     "description": "Symfony environment configuration.",
     "run_list": [
         "recipe[symfony]",
+        "recipe[symfony::test]",
         "recipe[lamp::nfs]",
         "recipe[lamp::xdebug]"
     ],
