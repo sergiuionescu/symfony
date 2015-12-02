@@ -88,6 +88,7 @@ def create_app
   end
 
   execute "setup-db-#{current_resource.app_name}" do
+    @app_console = get_console
     cwd current_resource.app_root
     command "php app/console doctrine:database:create"
     not_if "ls .install"
@@ -104,3 +105,11 @@ def delete_app
     command "rm -rf #{current_resource.app_root}"
   end
 end
+
+def get_console
+    @app_console = 'app/console'
+    if ::File.exist?('/var/www/#{current_resource.app_root}/bin/console')
+     @app_console = 'bin/console'
+    end
+    return @app_console
+end;
