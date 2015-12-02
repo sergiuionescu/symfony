@@ -10,7 +10,7 @@ symfony_app "symfony" do
 end
 web_app "symfony" do
   template "symfony.conf.erb"
-  docroot "#{project_root}/web"
+  docroot "/var/www/symfony/web"
   server_name node['fqdn']
   server_aliases []
 end
