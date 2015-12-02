@@ -57,7 +57,7 @@ GRAPH
   sendmail (0.1.0)
   smf (2.2.7)
     rbac (>= 1.0.1)
-  symfony (0.1.1)
+  symfony (0.1.2)
     lamp (>= 0.0.0)
   sysctl (0.6.2)
     ohai (>= 0.0.0)
