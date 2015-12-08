@@ -11,7 +11,7 @@ attribute :core_version, :kind_of => String, :default => node['symfony']['core']
 attribute :database_host, :kind_of => String, :regex => Resolv::IPv4::Regex, :default => node['symfony']['project']['database_host']
 attribute :database_driver, :kind_of => String, :default => node['symfony']['project']['database_driver']
 attribute :unix_socket, :kind_of => String, :default => node['symfony']['project']['unix_socket']
-attribute :create_db, :kind_of => Boolean, :default => false
+attribute :create_db, :kind_of => [ TrueClass, FalseClass ], :default => false
 attribute :database_name, :kind_of => String, :default => node['symfony']['project']['database_name']
 attribute :database_port, :kind_of => String, :default => node['symfony']['project']['database_port']
 attribute :database_user, :kind_of => String, :default => node['symfony']['project']['database_user']
