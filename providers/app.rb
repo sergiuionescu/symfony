@@ -61,7 +61,7 @@ end
 def create_app
   execute "create-project-#{current_resource.app_name}" do
     cwd  '/var/www'
-    command "symfony new #{current_resource.app_name} #{node['symfony']['core']['version']}"
+    command "symfony new #{current_resource.app_name} #{current_resource.core_version}"
   end
 
   template "#{current_resource.app_root}/app/config/parameters.yml" do
@@ -87,16 +87,18 @@ def create_app
     command "chown #{node['apache']['user']}:#{node['apache']['group']} -R #{current_resource.app_root}"
   end
 
-  execute "setup-db-#{current_resource.app_name}" do
-    console = get_console
-    cwd current_resource.app_root
-    command "php #{console} doctrine:database:create"
-    not_if "ls .install"
-  end
+  if current_resource.create_db == true
+      execute "setup-db-#{current_resource.app_name}" do
+        console = get_console
+        cwd current_resource.app_root
+        command "php #{console} doctrine:database:create"
+        not_if "ls .install"
+      end
 
-  execute "setup-db-#{current_resource.app_name}" do
-    cwd  current_resource.app_root
-    command "touch .install"
+      execute "setup-db-#{current_resource.app_name}" do
+        cwd  current_resource.app_root
+        command "touch .install"
+      end
   end
 end
 
@@ -108,7 +110,7 @@ end
 
 def get_console
     console = 'app/console'
-    if ::File.exist?("#{current_resource.app_root}/bin/console")
+    if current_resource.core_version == 'latest' or current_resource.core_version.to_f > 3
      console = 'bin/console'
     end
     console
