@@ -68,7 +68,6 @@ def create_app
     source "parameters.yml.erb"
     variables(
         :database_driver => current_resource.database_driver,
-        :core_version => current_resource.core_version,
         :unix_socket => current_resource.unix_socket,
         :database_host => current_resource.database_host,
         :database_name => current_resource.database_name,
