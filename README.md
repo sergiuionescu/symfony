@@ -48,22 +48,22 @@ Actions
 - `:delete`: - Delete the application files
 
 Attribute parameters
-`app_name` - Name attribute. The application name and path suffix.
-`core_version` - Symfony core version.
-`database_host` - Database hostname/ip.
-`database_driver` - Database driver. Ex pdo_mysql.
-`unix_socket` - Mysql unix socket path.
-`create_db` - Boolean, does not create a db via doctrine by default.
-`database_name` - Database name, defaults to `symfony`.
-`database_port` - Database port.
-`database_user` - Database username.
-`database_password` - Database password.
-`mailer_transport` - Mailer transport. Ex smtp.
-`mailer_host` - Mailer host.
-`mailer_user` - Mailer username.
-`mailer_password` - Mailer password.
-`locale` - Application locale.
-`secret` - Application secret.
+- `app_name` - Name attribute. The application name and path suffix.
+- `core_version` - Symfony core version.
+- `database_host` - Database hostname/ip.
+- `database_driver` - Database driver. Ex pdo_mysql.
+- `unix_socket` - Mysql unix socket path.
+- `create_db` - Boolean, does not create a db via doctrine by default.
+- `database_name` - Database name, defaults to `symfony`.
+- `database_port` - Database port.
+- `database_user` - Database username.
+- `database_password` - Database password.
+- `mailer_transport` - Mailer transport. Ex smtp.
+- `mailer_host` - Mailer host.
+- `mailer_user` - Mailer username.
+- `mailer_password` - Mailer password.
+- `locale` - Application locale.
+- `secret` - Application secret.
 
 Customizing your dev environment
 --------------------------------
