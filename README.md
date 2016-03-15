@@ -26,7 +26,7 @@ Resources links
 * Virtualbox: https://www.virtualbox.org/wiki/Downloads
 
 
-How to test dev environment
+How to test the dev environment
 ---------------------------
 - Clone the repository
 - Go to the project root
